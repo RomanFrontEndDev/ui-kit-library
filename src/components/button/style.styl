@@ -1,0 +1,192 @@
+.ui-button
+    position relative
+    display flex
+    align-items center
+    justify-content center
+    gap 8px
+    padding 0
+    font-family 'Roboto', sans-serif
+    font-size 17px
+    font-weight 500
+    line-height 24px
+    border-radius none
+    border 1px solid transparent
+    background-color transparent
+    appearance none
+    cursor pointer
+    color inherit
+    outline none
+
+    &:after
+        content ''
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        width 100%
+        height 100%
+        background-color rgba(255, 255, 255, 0.12)
+        transition opacity 0.3s ease, height 0.3s ease
+        opacity 0
+
+    &:before
+        content ''
+        position absolute
+        top -2px
+        left -2px
+        right -2px
+        bottom -2px
+        border 1px solid #0099ff
+        opacity 0
+
+    &--primary
+        background-color #ff7700
+        color #ffffff
+
+        &:hover,
+        &:active
+            &:after
+                opacity 1
+
+        .ui-counter
+            background-color rgba(255, 255, 255, 0.12)
+
+    &--secondary
+        background-color rgba(131, 102, 86, 0.12)
+        color #2e2f33
+
+        &:hover,
+        &:active
+            &:after
+                background-color rgba(131, 102, 86, 0.12)
+                opacity 1
+
+        .ui-counter
+            background-color rgba(131, 102, 86, 0.12)
+            color #2e2f33
+
+    &--small
+        height 28px
+        padding 6px 10px
+        font-size 13px
+        line-height 16px
+        border-radius 9px
+
+        &:after,
+        &:before
+            border-radius 9px
+
+        .ui-counter
+            width 16px
+            height 16px
+
+        &:hover
+            height 30px
+
+            .ui-counter
+                width 18px
+                height 16px
+
+        &:active
+            height 26px
+
+            .ui-counter
+                width 14px
+                height 14px
+
+    &--medium
+        height 36px
+        padding 8px 12px
+        font-size 15px
+        line-height 20px
+        border-radius 12px
+
+        &:after,
+        &:before
+            border-radius 12px
+
+        .ui-counter
+            width 20px
+            height 20px
+
+        &:hover
+            height 38px
+
+            .ui-counter
+                width 22px
+                height 20px
+
+        &:active
+            height 32px
+
+            .ui-counter
+                width 18px
+                height 18px
+
+    &--large
+        height 56px
+        padding 16px
+        font-size 17px
+        line-height 24px
+        border-radius 16px
+
+        &:after,
+        &:before
+            border-radius 16px
+
+        .ui-counter
+            width 24px
+            height 24px
+
+        &:hover
+            height 58px
+
+            .ui-counter
+                width 26px
+                height 24px
+
+        &:active
+            height 50px
+
+            .ui-counter
+                width 22px
+                height 22px
+
+    &--focused
+        border 1px solid #ffffff
+
+        &:before
+            opacity 1
+
+    &:disabled,
+    &--disabled
+        user-select none
+        pointer-events none
+        opacity 0.36
+
+    &__loader
+        position absolute
+        top 50%
+        left 0
+        right 0
+        display flex
+        align-items center
+        justify-content center
+        width 24px
+        height 24px
+        margin 0 auto
+        transform-origin center
+        transform translateY(-50%)
+
+    &.is-loading
+        user-select none
+        pointer-events none
+        background-color transparent
+        color transparent
+
+    &--primary&.is-loading
+        background-color #ff7700
+
+    &--secondary&.is-loading
+        background-color rgba(131, 102, 86, 0.12)

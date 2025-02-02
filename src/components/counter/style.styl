@@ -1,0 +1,95 @@
+.ui-counter
+    position relative
+    display flex
+    align-items center
+    justify-content center
+    font-family 'Roboto', sans-serif
+    font-size 15px
+    font-weight 500
+    line-height 20px
+    border-radius 100px
+    border 1px solid transparent
+
+    &--primary
+        background-color #2fb675
+        color #ffffff
+
+    &--secondary
+        background-color rgba(131, 102, 86, 0.12)
+        color #2e2f33
+
+    &--extra-small
+        width 8px
+        height 8px
+
+    &--small
+        width 12px
+        height 12px
+
+    &--medium
+        width 16px
+        height 16px
+        font-size 11px
+        font-weight 800
+        line-height 12px
+
+    &--large
+        width 20px
+        height 20px
+        font-size 13px
+        line-height 16px
+
+    &--extra-large
+        width 24px
+        height 24px
+
+    &--stroke
+        border 2px solid #ffffff
+
+    &--extra-small&--stroke
+        border 1px solid #ffffff
+
+    &--pulse
+        &:after
+            content ''
+            position absolute
+            top 0
+            left 0
+            display none
+            width 100%;
+            height 100%
+            border-radius 100%
+            animation-name pulse
+            animation-iteration-count infinite
+            animation-duration 2s
+            z-index -1
+
+    &--primary&--pulse
+        &:after
+            background-color #2fb675
+
+    &--secondary&--pulse
+        &:after
+            background-color rgba(131, 102, 86, 0.12)
+
+
+    &--extra-small&--pulse,
+    &--small&--pulse
+        &:after
+            display block
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(3);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}

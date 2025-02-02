@@ -1,0 +1,29 @@
+.ui-loader
+    display flex
+    transform-origin center
+    will-change transform
+
+    &__loader
+        fill transparent
+        stroke rgba(46, 47, 51, 0.6)
+        animation dash 2s ease infinite, rotate 2s linear infinite
+
+@keyframes dash
+    0%
+        stroke-dasharray 1, 96
+        stroke-dashoffset 0
+
+    50%
+        stroke-dasharray 86, 96
+        stroke-dashoffset -20
+
+    100%
+        stroke-dasharray 86, 95
+        stroke-dashoffset var(--dash, 90)
+
+@keyframes rotate
+    0%
+        transform rotate(0deg)
+
+    100%
+        transform rotate(360deg)
