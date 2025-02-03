@@ -26,11 +26,9 @@ export default {
         resolve(),
         commonjs(),
         peerDepsExternal(),
-        typescript(
-            typescript({
-                tsconfig: './tsconfig.json'
-            }),
-        ),
+        typescript({
+            tsconfig: './tsconfig.json' // передаем объект настроек напрямую
+        }),
         postcss({
             extensions: [
                 '.styl'

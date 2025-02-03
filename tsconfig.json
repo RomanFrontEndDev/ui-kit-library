@@ -12,6 +12,9 @@
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+        "outDir": "./dist",
         "paths": {
             "@/*": [
                 "src/*"
@@ -22,7 +25,7 @@
             "dom",
             "dom.iterable",
             "scripthost"
-        ],
+        ]
     },
     "include": [
         "src",

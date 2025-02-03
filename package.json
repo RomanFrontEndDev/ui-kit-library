@@ -1,7 +1,20 @@
 {
-  "name": "ui-kit",
+  "name": "@roman.vassin/ui-kit",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Для более подробной информации смотреть [документацию Rollup](https://rollupjs.org/introduction/).",
+  "homepage": "https://github.com/RomanFrontEndDev/ui-kit-library#readme",
+  "bugs": {
+    "url": "https://github.com/RomanFrontEndDev/ui-kit-library/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanFrontEndDev/ui-kit-library.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/index.сjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
@@ -36,5 +49,6 @@
     "stylus": "^0.64.0",
     "typescript": "^5.7.3",
     "vite": "^6.0.11"
-  }
+  },
+  "module": "dist/index.esm"
 }
